@@ -1,0 +1,9 @@
+/* types */
+{{#each nsInfo.static.typeCategory}}
+export * from './types/{{slug}}'
+{{/each}}
+
+/* constants */
+{{#each nsInfo.static.grouping}}
+export const {{slug}} = require('./groupings/{{slug}}')
+{{/each}}

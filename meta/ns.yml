@@ -1,0 +1,14 @@
+userClass: user
+codeName: MyApp
+template:
+  dir: /home/yisroel/packages/packrat-ts-all/packrat
+  name: null
+  version: 1
+starter: /home/yisroel/packages/installist-all/installist.starter
+general:
+  packageName: installist
+  author: YizYah
+  owner: YizYah
+  description: install a list of packages
+  repositoryName: installist
+  license: MIT
