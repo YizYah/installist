@@ -5,11 +5,11 @@ const fs = require('fs-extra');
 
 const mainInstallation = [
   'barbells',
-  'geenee-rate',
+  'geenee-rate@0.1.10',
 ]
 
-const devInstallation = [
-  'cogs-box',
+const mainInstallationFailing = [
+  'test#',
 ]
 
 const codeDir='/tmp/testInstallist'
@@ -20,9 +20,16 @@ const codeDir='/tmp/testInstallist'
     }
 
     const listrToRun = await installist(mainInstallation,codeDir,DepType.MAIN)
-
     await listrToRun.run()
 
     t.true(await fs.pathExists(codeDir + '/node_modules/barbells'));
 
-});
+
+    const listrToRun2 = await installist(mainInstallationFailing,codeDir,DepType.MAIN)
+
+    const error = await t.throwsAsync(async () => {
+      await listrToRun2.run()
+    });
+    t.regex(error.message, /Invalid tag name /);
+
+  });
