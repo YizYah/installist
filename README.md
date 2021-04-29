@@ -11,7 +11,7 @@
 
 ![](images/installist.gif)
 
-install a list of packages from an array of names
+creates a lister to install a list of packages from an array of names
 
 [//]: # ( ns__custom_end description )
 
