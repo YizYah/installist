@@ -30,13 +30,6 @@
   "engines": {
     "node": ">=8.0.0"
   },
-  "files": [
-    "/bin",
-    "/lib",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json",
-    "lib/**/*"
-  ],
   "homepage": "https://github.com/YizYah/installist",
   "keywords": [
     "ts-packrat",
@@ -50,17 +43,18 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts\"",
     "lintfix": "eslint \"src/**/*.ts\" --fix",
-    "postpack": "rm -f oclif.manifest.json",
     "posttest": "npm run view-coverage && npm run report && npm run lint",
     "prepack": "rm -rf lib && tsc -b",
     "test": "ava",
-    "version": "oclif-dev readme && git add README.md",
     "build": "tsc",
     "commit": "git-cz",
     "report": "nyc report --reporter=json",
     "semantic-release": "semantic-release",
     "view-coverage": "nyc --extension .ts ava --forbid-only"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "types": "lib/index.d.ts",
   "ava": {
     "files": [
