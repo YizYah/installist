@@ -11,7 +11,7 @@
 
 ![](images/installist.gif)
 
-creates a lister to install a list of packages from an array of names
+creates a listr to install a list of packages from an array of names
 
 [//]: # ( ns__custom_end description )
 
@@ -22,8 +22,7 @@ creates a lister to install a list of packages from an array of names
 [//]: # ( ns__custom_start badges )
 
 [//]: # ( ns__start_section usageSection )
-
-[![codecov](https://codecov.io/gh/YizYah/installist/branch/main/graph/badge.svg?token=019QO4XK1Z)](https://codecov.io/gh/YizYah/installist)
+[![codecov](https://codecov.io/gh/YizYah/installist/branch/main/graph/badge.svg?token=8esuJMyMMO)](https://codecov.io/gh/YizYah/installist)
 [![Version](https://img.shields.io/npm/v/installist.svg)](https://npmjs.org/package/installist)
 [![Downloads/week](https://img.shields.io/npm/dw/installist.svg)](https://npmjs.org/package/installist)
 [![License](https://img.shields.io/npm/l/installist.svg)](https://github.com/YizYah/installist/blob/master/package.json)
