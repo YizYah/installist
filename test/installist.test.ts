@@ -5,15 +5,11 @@ const fs = require('fs-extra');
 
 const mainInstallation = [
   'barbells',
-  'geenee-rate',
+  'geenee-rate@0.1.10',
 ]
 
 const mainInstallationFailing = [
   'test#',
-]
-
-const devInstallation = [
-  'cogs-box',
 ]
 
 const codeDir='/tmp/testInstallist'
