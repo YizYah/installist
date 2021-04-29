@@ -23,9 +23,14 @@ install a list of packages from an array of names
 
 [//]: # ( ns__start_section usageSection )
 
+[![codecov](https://codecov.io/gh/YizYah/installist/branch/main/graph/badge.svg?token=019QO4XK1Z)](https://codecov.io/gh/YizYah/installist)
 [![Version](https://img.shields.io/npm/v/installist.svg)](https://npmjs.org/package/installist)
 [![Downloads/week](https://img.shields.io/npm/dw/installist.svg)](https://npmjs.org/package/installist)
 [![License](https://img.shields.io/npm/l/installist.svg)](https://github.com/YizYah/installist/blob/master/package.json)
+
+
+[![Geenee](https://img.shields.io/badge/maintained%20by-geenee-brightgreen)](https://npmjs.org/package/geenee)
+[![Template](https://img.shields.io/badge/template-ts--packrat-blue)](https://npmjs.org/package/ts-packrat)
 
 [//]: # ( ns__custom_end badges )
 
