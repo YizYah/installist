@@ -1,3 +1,4 @@
+/* ns__file unit: standard, comp: .gitignore */
 *-debug.log
 *-error.log
 /.nyc_output
@@ -6,3 +7,9 @@
 /tmp
 /yarn.lock
 node_modules
+.yalc
+yalc.lock
+
+/* ns__custom_start extra */
+.idea
+/* ns__custom_end extra */

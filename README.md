@@ -33,14 +33,24 @@ install a list of packages
 
 [//]: # ( ns__start_section api )
 
+
+[//]: # ( ns__custom_start APIIntro )
 # API
 
+[//]: # ( ns__custom_end APIIntro )
+
+
+[//]: # ( ns__custom_start constantsIntro )
 ## General Constants and Commands
 
+[//]: # ( ns__custom_end constantsIntro )
 
 
-## Types
-The following interfaces are exposed by installist.
+
+[//]: # ( ns__start_section types )
+
+
+[//]: # ( ns__end_section types )
 
 
 [//]: # ( ns__end_section api )
