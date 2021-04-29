@@ -39,9 +39,10 @@
   ],
   "homepage": "https://github.com/YizYah/installist",
   "keywords": [
-    "oclif",
     "ts-packrat",
-    "geenee"
+    "geenee",
+    "install",
+    "listr"
   ],
   "license": "MIT",
   "main": "lib/index.js",

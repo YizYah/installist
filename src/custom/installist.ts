@@ -12,13 +12,6 @@ const depTypeSaveString = {
   [DepType.DEV]: '--save-dev'
 }
 
-// function createInstallationCommandSpecs: CommandSpec[] (packages: string[], depType: DepType){
-//   return packages.map(
-//     // ...
-//     // call this below, and then return it called to monsterBash
-//   )
-// }
-
 export function installist(packages: string[], dir: string, depType: DepType) {
   const listItems = packages.map((item: string) => {
     return {
