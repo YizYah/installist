@@ -8,6 +8,4 @@ import {DepType,installist} from './custom/installist'
 /* types */
 /* ns__custom_start export */
 export {DepType, installist}
-// module.exports = exports = {DepType, installist}
-// module.exports = require('./custom/installist').installist
 /* ns__custom_end export */
