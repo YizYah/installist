@@ -1,5 +1,22 @@
 import test from 'ava';
-import { DepType, installist } from '../src/custom/installist';
+
+const proxyquire = require('proxyquire');
+const sinon = require('sinon');
+
+const fakeInstalledPackages: string[] = []
+const execaFake = (file: string, args: string[]) => {
+  if (file==='npm') {
+    const packageName = args[4]
+    if (packageName.indexOf('#') > -1) throw new Error(`Invalid tag name '${packageName}'`)
+    fakeInstalledPackages.push(packageName)
+  }
+}
+const execa = sinon.stub().callsFake(execaFake);
+
+
+import { DepType } from '../src/custom/installist';
+const installistModule = proxyquire('../src/custom/installist', { 'execa': execa})
+const {installist} = installistModule
 
 const fs = require('fs-extra');
 
@@ -12,9 +29,10 @@ const mainInstallationFailing = [
   'test#',
 ]
 
-const codeDir='/tmp/testInstallist'
+const codeDir=__dirname +  '/temp'
 
   test('installist', async t => {
+
     if (!fs.existsSync(codeDir)) {
       await fs.mkdir(codeDir)
     }
@@ -22,7 +40,7 @@ const codeDir='/tmp/testInstallist'
     const listrToRun = await installist(mainInstallation,codeDir,DepType.MAIN)
     await listrToRun.run()
 
-    t.true(await fs.pathExists(codeDir + '/node_modules/barbells'));
+    t.true(fakeInstalledPackages.includes('barbells'))
 
 
     const listrToRun2 = await installist(mainInstallationFailing,codeDir,DepType.MAIN)
@@ -30,6 +48,7 @@ const codeDir='/tmp/testInstallist'
     const error = await t.throwsAsync(async () => {
       await listrToRun2.run()
     });
+
     t.regex(error.message, /Invalid tag name /);
 
   });
